@@ -15,6 +15,7 @@ h1 {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 60px;
 }
+
 #t01 {
     position: absolute;
     border-spacing: 25px;
@@ -23,4 +24,3 @@ h1 {
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
 }
-
