@@ -1,4 +1,6 @@
 # E & D I
+(https://eeriley99.github.io/EDI/)
+
 
 ︵‿E&amp;D I‿︵(https://eeriley99.github.io/EDI/EDIMain/index.html)
 <table class="tg">
