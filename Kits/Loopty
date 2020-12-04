@@ -1,0 +1,38 @@
+var l;
+var r; //radius
+var angle;
+var step; //distance between steps in radians
+
+function setup() {
+  createCanvas(400, 400);
+  noStroke();
+  fill(0);
+  background(255);
+  //initialize variables
+  l = 0;
+  r = 30;
+  angle = 0;
+  step = TWO_PI / 360; //in radians equivalent of 360/6 in degrees
+}
+
+function draw() {
+
+  while (l < width / 2) {
+    ellipse(l, height / 2, 30, 30);
+    l = l + 1;
+  }
+
+  //convert polar coordinates to cartesian coordinates
+  var x = r * sin(angle);
+  var y = r * cos(angle);
+  
+    //move 0,0 to the center of the screen
+ translate(width/2, height/2 - r);
+  
+    //draw ellipse at every x,y point
+  ellipse(x, y, 30);
+  
+    //increase angle by step size
+  angle = angle + step;
+
+}
