@@ -1,4 +1,4 @@
-//2.1 Tuning the window using more variables
+//3. Random
 
 function setup() {
   createCanvas(windowWidth, windowWidth);
