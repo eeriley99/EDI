@@ -1,7 +1,7 @@
-//3. Random
+//3 Random
 
 function setup() {
-  createCanvas(windowWidth, windowWidth);
+  createCanvas(720, 720);
   noFill();
   noStroke();
   frameRate(1);
@@ -11,22 +11,34 @@ function draw() {
   background(255);
 
   var windowPane = 10; // padding around box array
-  var num = 5; //number of boxes in an array
-  var shift = random(-10, 10); //degree of shift in quad
-  var space = 40; //space between squares
+  var num = 7; //number of boxes in array
+  var shift = random(-5, 5); //degree of shift in quad
+  var space = 60; //space between squares
 
-  translate(windowPane + space / 2, windowPane + space / 2); //padding (x,y) start point
+  translate(windowPane + space / 2, windowPane + space / 2); //(x,y) start point offset for padding
 
-  var sideLen = (windowWidth - 2 * windowPane) / num //length of individual side of a box
-
+  var sideLen = (720 - 2 * windowPane) / num //length of individual side of a box
 
   for (var x = 0; x < num * sideLen; x = x + sideLen) {
     for (var y = 0; y < num * sideLen; y = y + sideLen) {
 
       fill(random(200, 255), 0, random(200, 255));
       
-      quad(x + random(-shift, shift), y + random(-shift, shift), x + sideLen - space + random(-shift, shift), y + random(-shift, shift), x + sideLen - space + random(-shift, shift), y + sideLen - space + random(-shift, shift), x + random(-shift, shift), y + sideLen - space + random(-shift, shift));
-
+      //a random shift is added to each vertex
+      // add length of individual side of a box (num) and 
+      //subtract space between squares (space) to keep spacing true
+      
+      quad(random(-shift, shift) + x, 
+           random(-shift, shift) + y, 
+           
+           random(-shift, shift) + x + sideLen - space, 
+           random(-shift, shift) + y, 
+           
+           random(-shift, shift) + x + sideLen - space, 
+           random(-shift, shift) + y + sideLen - space, 
+           
+           random(-shift, shift) + x, 
+           random(-shift, shift) + y + sideLen - space);
     }
   }
 }
