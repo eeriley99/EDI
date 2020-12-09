@@ -1,5 +1,6 @@
 function setup() {
-    createCanvas(1250, 1250);
+    createCanvas(displayWidth, displayWidth);
+    stroke(255);
     noFill();
     ellipseMode(CENTER);
     frameRate(1);
@@ -10,8 +11,8 @@ function draw() {
     background(255);
 
     var windowPad = 40; //padding around circle array
-    var windowPane = (1250 - 2 * windowPad); //size of window in pixels
-    var num = 20; //circles in array x,y direction
+    var windowPane = (displayWidth - 2 * windowPad); //size of window in pixels
+    var num = (random(2, 20)); //circles in array x,y direction
 
     var sizeCirc = windowPane / num //size of individual circle in the array
 
@@ -24,7 +25,7 @@ function draw() {
             for (var w = sizeCirc; w > 0; w = w - r) { //creates concentric circles and resets random radius 
                 ellipse(x, y, w, w);
                 r = random(2, 20);
-                stroke(0, random(0, 255), random(0, 255));
+                stroke(0, random(0, 255), random(0, 255), 50);
             }
         }
     }
