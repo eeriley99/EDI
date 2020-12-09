@@ -5,7 +5,7 @@ function setup() {
     noFill();
     noStroke();
     frameRate(1);
-    cursor('https://eeriley99.github.io/code_sketchbook/icons-master/rnbw.gif');
+    cursor('https://eeriley99.github.io/code_sketchbook/icons-master/compIcon.gif');
 }
 
 function draw() {
