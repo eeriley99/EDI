@@ -1,15 +1,23 @@
 //3 Random
 
 function setup() {
+<<<<<<< Updated upstream
   createCanvas(720, 720);
   noFill();
   noStroke();
   frameRate(1);
+=======
+    createCanvas(720, 720);
+    noFill();
+    noStroke();
+    frameRate(1);
+>>>>>>> Stashed changes
 }
 
 function draw() {
-  background(255);
+    background(255);
 
+<<<<<<< Updated upstream
   var windowPane = 10; // padding around box array
   var num = 7; //number of boxes in array
   var shift = random(-5, 5); //degree of shift in quad
@@ -18,10 +26,23 @@ function draw() {
   translate(windowPane + space / 2, windowPane + space / 2); //(x,y) start point offset for padding
 
   var sideLen = (720 - 2 * windowPane) / num //length of individual side of a box
+=======
+    var windowPane = 10; // padding around box array
+    var num = 7; //number of boxes in array
+    var shift = random(-5, 5); //degree of shift in quad
+    var space = 60; //space between squares
 
-  for (var x = 0; x < num * sideLen; x = x + sideLen) {
-    for (var y = 0; y < num * sideLen; y = y + sideLen) {
+    translate(windowPane + space / 2, windowPane + space / 2); //(x,y) start point offset for padding
 
+    var sideLen = (720 - 2 * windowPane) / num //length of individual side of a box
+
+    for (var x = 0; x < num * sideLen; x = x + sideLen) {
+        for (var y = 0; y < num * sideLen; y = y + sideLen) {
+>>>>>>> Stashed changes
+
+            fill(random(200, 255), 0, random(200, 255));
+
+<<<<<<< Updated upstream
       fill(random(200, 255), 0, random(200, 255));
       
       //a random shift is added to each vertex
@@ -39,6 +60,23 @@ function draw() {
            
            random(-shift, shift) + x, 
            random(-shift, shift) + y + sideLen - space);
+=======
+            //a random shift is added to each vertex
+            // add length of individual side of a box (num) and 
+            //subtract space between squares (space) to keep spacing true
+
+            quad(random(-shift, shift) + x,
+                random(-shift, shift) + y,
+
+                random(-shift, shift) + x + sideLen - space,
+                random(-shift, shift) + y,
+
+                random(-shift, shift) + x + sideLen - space,
+                random(-shift, shift) + y + sideLen - space,
+
+                random(-shift, shift) + x,
+                random(-shift, shift) + y + sideLen - space);
+        }
+>>>>>>> Stashed changes
     }
-  }
 }
