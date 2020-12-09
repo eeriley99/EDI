@@ -7,7 +7,9 @@ function setup() {
     ellipseMode(CENTER);
     frameRate(1);
     num = random(2, 20); //circles in array x,y direction
+    cursor('https://eeriley99.github.io/code_sketchbook/icons-master/compIcon.gif');
 }
+
 
 function draw() {
 

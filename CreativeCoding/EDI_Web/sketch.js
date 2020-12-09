@@ -3,7 +3,7 @@
 function setup() {
     createCanvas(windowWidth, windowWidth);
     noFill();
-    noStroke();
+    strokeWeight(1);
     frameRate(1);
     cursor('https://eeriley99.github.io/code_sketchbook/icons-master/compIcon.gif');
 }
@@ -18,7 +18,7 @@ function draw() {
     var shift = random(-7, 7); //degree of shift in quad
     var space = 100; //space between squares
 
-    translate(windowPane + space / 2, windowPane + space / 2); //(x,y) start point offset for padding
+    translate(windowPane + space / 2, (windowPane + space / 2) + 200); //(x,y) start point offset for padding
 
     var sideLen = (windowWidth - 2 * windowPane) / num //length of individual side of a box
 
