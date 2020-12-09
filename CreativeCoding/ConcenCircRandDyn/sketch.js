@@ -1,9 +1,12 @@
+var num;
+
 function setup() {
     createCanvas(displayWidth, displayWidth);
     stroke(255);
     noFill();
     ellipseMode(CENTER);
     frameRate(1);
+    num = random(2, 20); //circles in array x,y direction
 }
 
 function draw() {
@@ -12,7 +15,8 @@ function draw() {
 
     var windowPad = 40; //padding around circle array
     var windowPane = (displayWidth - 2 * windowPad); //size of window in pixels
-    var num = (random(2, 20)); //circles in array x,y direction
+
+
 
     var sizeCirc = windowPane / num //size of individual circle in the array
 
