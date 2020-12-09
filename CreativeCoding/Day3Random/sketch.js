@@ -11,9 +11,9 @@ function draw() {
     background(255);
 
     var windowPane = 10; // padding around box array
-    var num = 7; //number of boxes in array
+    var num = 4; //number of boxes in array
     var shift = random(-5, 5); //degree of shift in quad
-    var space = 60; //space between squares
+    var space = 100; //space between squares
 
     translate(windowPane + space / 2, windowPane + space / 2); //(x,y) start point offset for padding
 
