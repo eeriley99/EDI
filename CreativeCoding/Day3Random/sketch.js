@@ -1,7 +1,7 @@
 //3 Random
 
 function setup() {
-    createCanvas(720, 720);
+    createCanvas(displayWidth, displayWidth);
     noFill();
     noStroke();
     frameRate(1);
@@ -17,7 +17,7 @@ function draw() {
 
     translate(windowPane + space / 2, windowPane + space / 2); //(x,y) start point offset for padding
 
-    var sideLen = (720 - 2 * windowPane) / num //length of individual side of a box
+    var sideLen = (displayWidth - 2 * windowPane) / num //length of individual side of a box
 
     for (var x = 0; x < num * sideLen; x = x + sideLen) {
         for (var y = 0; y < num * sideLen; y = y + sideLen) {
