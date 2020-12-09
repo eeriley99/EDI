@@ -41,4 +41,5 @@ function draw() {
                 random(-shift, shift) + y + sideLen - space);
         }
     }
+
 }
