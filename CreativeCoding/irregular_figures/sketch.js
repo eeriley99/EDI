@@ -2,17 +2,16 @@
 
 function setup() {
     createCanvas(windowWidth, windowWidth);
-    noFill();
-    noStroke();
+    strokeWeight(1);
     frameRate(1);
     cursor('https://eeriley99.github.io/code_sketchbook/icons-master/clickFinger.gif');
 }
 
 function draw() {
-   background(255);
+    background(255);
 
     var windowPane = 10; // padding around box array
-    var num = 8; //number of boxes in array
+    var num = 20; //number of boxes in array
     var shift = random(-5, 5); //degree of shift in quad
     var space = 100; //space between squares
 
@@ -23,39 +22,32 @@ function draw() {
     for (var x = 0; x < num * sideLen; x = x + sideLen) {
         for (var y = 0; y < num * sideLen; y = y + sideLen) {
 
-            fill(random(200, 255), 0, random(200, 255));
+            stroke(random(215, 255), random(215, 255), 0);
+
+            fill(random(215, 255), random(215, 255), 0, 150);
 
             //a random shift is added to each vertex
             // add length of individual side of a box (num) and 
             //subtract space between squares (space) to keep spacing true
-          
-          beginShape();
-vertex(random(-shift, shift) + x,
-       random(-shift, shift) + y);
-vertex(random(-shift, shift) + x + 20,
-       random(-shift, shift) + y);
-vertex(random(-shift, shift) + x + 20,
-       random(-shift, shift) + y + 20);
-vertex(random(-shift, shift) + x + 40,
-       random(-shift, shift) + y + 20);
-vertex(random(-shift, shift) + x + 40,
-       random(-shift, shift) + y + 40);
-vertex(random(-shift, shift) + x,
-       random(-shift, shift) + y + 40);
-endShape(CLOSE);
 
-          
-//             quad(random(-shift, shift) + x,
-//                 random(-shift, shift) + y,
+            rotate(PI / 3.0);
 
-//                 random(-shift, shift) + x + sideLen - space,
-//                 random(-shift, shift) + y,
+            beginShape();
+            vertex(random(-shift, shift) + x,
+                random(-shift, shift) + y);
+            vertex(random(-shift, shift) + x + 20,
+                random(-shift, shift) + y);
+            vertex(random(-shift, shift) + x + 20,
+                random(-shift, shift) + y + 20);
+            vertex(random(-shift, shift) + x + 40,
+                random(-shift, shift) + y + 20);
+            vertex(random(-shift, shift) + x + 40,
+                random(-shift, shift) + y + 40);
+            vertex(random(-shift, shift) + x,
+                random(-shift, shift) + y + 40);
+            endShape(CLOSE);
 
-//                 random(-shift, shift) + x + sideLen - space,
-//                 random(-shift, shift) + y + sideLen - space,
 
-//                 random(-shift, shift) + x,
-//                 random(-shift, shift) + y + sideLen - space);
         }
     }
 
