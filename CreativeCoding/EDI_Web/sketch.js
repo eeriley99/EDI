@@ -14,7 +14,7 @@ function draw() {
         background(random(200, 255), random(200, 255), random(200, 255), 100);
 
     var windowPane = 10; // padding around box array
-    var num = 4; //number of boxes in array
+    var num = 3; //number of boxes in array
     var shift = random(-7, 7); //degree of shift in quad
     var space = 100; //space between squares
 
@@ -23,7 +23,7 @@ function draw() {
     var sideLen = (windowWidth - 2 * windowPane) / num //length of individual side of a box
 
     for (var x = 0; x < num * sideLen; x = x + sideLen) {
-        for (var y = 0; y < num * sideLen; y = y + sideLen) {
+        for (var y = 0; y < (num * sideLen) * 2 / 3; y = y + sideLen) {
 
             fill(random(200, 255), random(200, 255), random(200, 255), 100);
 
