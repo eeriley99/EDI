@@ -1,6 +1,6 @@
 var randDrawing;
 
-function preload() {
+function preload() { // all photos 150 pixel width
 
     arm = loadImage('assets/arm.jpg');
     shirt = loadImage('assets/shirt.jpg');
@@ -16,7 +16,7 @@ function preload() {
 }
 
 function setup() { //runs once
-    createCanvas(windowWidth, windowWidth);
+    createCanvas(windowWidth, windowHeight);
     noStroke();
     frameRate(.5);
 
@@ -28,7 +28,7 @@ function draw() {
 
     var sideLen = windowWidth / num; //variable for the side length of each square
 
-    for (var y = 0; y < windowWidth; y = y + sideLen) { //loop to create rows in the y direction
+    for (var y = 0; y < windowHeight; y = y + sideLen) { //loop to create rows in the y direction
 
         for (var x = 0; x < windowWidth; x = x + sideLen) { // loop to create a row of squares in the x direction
 
@@ -38,10 +38,10 @@ function draw() {
                 x + sideLen, y,
                 x + sideLen, y + sideLen,
                 x, y + sideLen);
-            image(pics[int(random(0, 9))], x + (sideLen / 2 - 40), y + (sideLen / 2 - 40));
+            image(pics[int(random(0, 10))], x + (sideLen / 2 - 75), y + (sideLen / 2 - 75));
 
         }
 
     }
-
+    noLoop();
 }
