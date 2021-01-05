@@ -22,9 +22,22 @@ h3 {
     font-size: 32px;
 }
 
-p {
+a:link {
+    color: #bac2bd;
+    background-color: transparent;
+    text-decoration: none;
+}
 
-    font-family: 'Catamaran', sans-serif;
+a:visited {
+    color: #ffc8af;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
 }
 
 canvas {
