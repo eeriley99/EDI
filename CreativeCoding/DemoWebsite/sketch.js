@@ -23,7 +23,7 @@ function draw() {
     for (var x = 0; x < num * sideLen; x = x + sideLen) {
         for (var y = 0; y < num * sideLen; y = y + sideLen) {
 
-            fill(0, random(200, 255), random(200, 255), 200);
+            fill(0, random(200, 255), random(200, 255), 50);
 
             //a random shift is added to each vertex
             // add length of individual side of a box (num) and 
