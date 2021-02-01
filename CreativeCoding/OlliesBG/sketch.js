@@ -1,7 +1,7 @@
 let img;
 
 function preload() {
-    img = loadImage('/images/DayWindow3.png');
+    img = loadImage('images/DayWindow3.png');
 }
 
 function setup() {
