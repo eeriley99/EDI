@@ -1,7 +1,7 @@
 let img;
 
 function preload() {
-    img = loadImage('DayWindow3.png');
+    img = loadImage('/images/DayWindow2.png');
 }
 
 function setup() {
@@ -14,8 +14,6 @@ function draw() {
     var num = 4;
 
     var XsideLen = windowWidth / num;
-
-    // var YsideLen = windowHeight / num);
 
 
     for (var dy = 0; dy < windowHeight; dy = dy + XsideLen * 0.53) {
