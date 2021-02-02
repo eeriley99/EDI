@@ -22,6 +22,19 @@ h3 {
     font-size: 32px;
 }
 
+a.a0 {
+    cursor: url('boxCursor.png'), auto;
+}
+
+a.a1 {
+    cursor: url('paneCursor.png'), auto;
+}
+
+a.a2 {
+    cursor: url('paperCursor.png'), auto;
+}
+
+
 a:link {
     color: #bac2bd;
     background-color: transparent;
@@ -35,9 +48,9 @@ a:visited {
 }
 
 a:hover {
-    color: red;
+    color: darkslategrey;
     background-color: transparent;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 canvas {
