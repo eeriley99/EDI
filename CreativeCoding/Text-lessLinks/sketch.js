@@ -83,3 +83,7 @@ function mousePressed() {
         window.open("http://www.artofdigitalfabrication.com/", target = "_blank");
     }
 }
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowWidth * 2.16);
+}
