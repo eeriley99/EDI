@@ -23,10 +23,6 @@ function preload() { // all photos 150 pixel width
 function setup() {
     createCanvas(innerWidth, innerHeight);
     noStroke();
-}
-
-function draw() {
-
     var num = 4; //variable for the number of squares in the array
 
     var sideLen = innerWidth / num; //variable for the side length of each square
@@ -46,14 +42,15 @@ function draw() {
         }
 
     }
+}
+
+function draw() {
 
     // background(220);
     textFont("Amatic SC");
     textSize(32);
     changeCursor();
     noLoop();
-
-
 }
 
 function changeCursor() {
