@@ -44,13 +44,14 @@ function draw() {
             image(pics[int(random(0, 10))], x + (sideLen / 2 - 75), y + (sideLen / 2 - 75));
 
         }
-        noLoop();
+
     }
 
     // background(220);
     textFont("Amatic SC");
     textSize(32);
     changeCursor();
+    noLoop();
 
 
 }
