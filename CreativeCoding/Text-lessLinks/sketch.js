@@ -50,7 +50,7 @@ function draw() {
     textFont("Amatic SC");
     textSize(32);
     changeCursor();
-    noLoop();
+
 }
 
 function changeCursor() {
