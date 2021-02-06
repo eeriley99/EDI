@@ -1,21 +1,36 @@
 //https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
 
-var link;
+//var link;
 
-var randDrawing;
+//var randDrawing;
+
+let n = 0;
+
+let P1;
+let P2;
+let P3;
+let P4;
+let P5;
+let P6;
+let P7;
+let P8;
+let P9;
+let P10;
+
+
 
 function preload() { // all photos 150 pixel width
 
-    arm = loadImage('../DrawingsBGrandom/assets/arm.jpg');
-    shirt = loadImage('../DrawingsBGrandom/assets/shirt.jpg');
-    hose = loadImage('../DrawingsBGrandom/assets/hose.jpg');
-    hand = loadImage('../DrawingsBGrandom/assets/hand.jpg');
-    feather = loadImage('../DrawingsBGrandom/assets/feather.jpg');
-    cans = loadImage('../DrawingsBGrandom/assets/cans.jpg');
-    firewood = loadImage('../DrawingsBGrandom/assets/firewood.jpg');
-    crib = loadImage('../DrawingsBGrandom/assets/crib.jpg');
-    caterpillar = loadImage('../DrawingsBGrandom/assets/caterpillar.jpg');
-    bird = loadImage('../DrawingsBGrandom/assets/bird.jpg');
+    P1 = loadImage('../DrawingsBGrandom/assets/arm.jpg');
+    P2 = loadImage('../DrawingsBGrandom/assets/shirt.jpg');
+    P3 = loadImage('../DrawingsBGrandom/assets/hose.jpg');
+    P4 = loadImage('../DrawingsBGrandom/assets/hand.jpg');
+    P5 = loadImage('../DrawingsBGrandom/assets/feather.jpg');
+    P6 = loadImage('../DrawingsBGrandom/assets/cans.jpg');
+    P7 = loadImage('../DrawingsBGrandom/assets/firewood.jpg');
+    P8 = loadImage('../DrawingsBGrandom/assets/crib.jpg');
+    P9 = loadImage('../DrawingsBGrandom/assets/caterpillar.jpg');
+    P10 = loadImage('../DrawingsBGrandom/assets/bird.jpg');
 
 }
 
@@ -23,28 +38,37 @@ function preload() { // all photos 150 pixel width
 function setup() {
     createCanvas(innerWidth, innerHeight);
     noStroke();
+
+}
+
+function draw() {
+
     var num = 4; //variable for the number of squares in the array
 
     var sideLen = innerWidth / num; //variable for the side length of each square
 
     for (var y = 0; y < innerHeight; y = y + sideLen) { //loop to create rows in the y direction
 
-        for (var x = 0; x < innerWidth; x = x + sideLen) { // loop to create a row of squares in the x direction
-            //background(255);
-            var pics = [arm, shirt, hose, hand, feather, cans, firewood, crib, caterpillar, bird];
+        for (var x = 0; x < innerWidth; x = x + sideLen) {
 
-            quad(x, y,
-                x + sideLen, y,
-                x + sideLen, y + sideLen,
-                x, y + sideLen);
-            image(pics[int(random(0, 10))], x + (sideLen / 2 - 75), y + (sideLen / 2 - 75));
+            if (n < 2) {
+                imgPlace(n, dx, dy, XsideLen, YsideLen);
+
+                quad(dx, dy,
+                    dx + XsideLen, dy,
+                    dx + XsideLen, dy + YsideLen,
+                    dx, dy + YsideLen);
+
+                n++;
+
+            } else {
+                n = 0;
+                image(KG3, dx, dy, XsideLen, YsideLen);
+            }
 
         }
 
     }
-}
-
-function draw() {
 
     // background(220);
     textFont("Amatic SC");
@@ -82,6 +106,15 @@ function mousePressed() {
         //range accounting for text length
         window.open("http://www.artofdigitalfabrication.com/", target = "_blank");
     }
+}
+
+function imgPlace(n, dx, dy, XsideLen, YsideLen) {
+
+    var pics = [P1, P2, P3, P4, P5, P6, P7, P8, P9, P10];
+
+    image(pics[n], sideLen, sideLen);
+
+
 }
 
 function windowResized() {
