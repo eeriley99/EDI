@@ -52,18 +52,18 @@ function draw() {
         for (var x = 0; x < innerWidth; x = x + sideLen) {
 
             if (n < 2) {
-                imgPlace(n, dx, dy, XsideLen, YsideLen);
+                imgPlace(n, sideLen, sideLen);
 
-                quad(dx, dy,
-                    dx + XsideLen, dy,
-                    dx + XsideLen, dy + YsideLen,
-                    dx, dy + YsideLen);
+                quad(x, y,
+                    x + sideLen, y,
+                    x + sideLen, y + sideLen,
+                    x, y + sideLen);
 
                 n++;
 
             } else {
                 n = 0;
-                image(KG3, dx, dy, XsideLen, YsideLen);
+                image(KG3, x, y, sideLen, sideLen);
             }
 
         }
@@ -108,11 +108,11 @@ function mousePressed() {
     }
 }
 
-function imgPlace(n, dx, dy, XsideLen, YsideLen) {
+function imgPlace(n, x, y) {
 
     var pics = [P1, P2, P3, P4, P5, P6, P7, P8, P9, P10];
 
-    image(pics[n], sideLen, sideLen);
+    image(pics[n], x, y);
 
 
 }
