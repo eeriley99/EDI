@@ -36,7 +36,7 @@ function changeCursor() {
         tint(255, 5);
     }
     if (mouseY > innerHeight / 2 && mouseX > innerWidth / 2) {
-        cursor('https://eeriley99.github.io/code_sketchbook/icons-master/caterpiller.png');
+        cursor('https://eeriley99.github.io/code_sketchbook/icons-master/caterpillar.png');
         image(sWork, mouseX, mouseY);
         tint(255, 5);
     }
