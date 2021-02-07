@@ -1,0 +1,15 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+canvas {
+    display: block;
+    z-index: -1;
+}
+
+bottomBuffer {
+    z-index: -2;
+}
