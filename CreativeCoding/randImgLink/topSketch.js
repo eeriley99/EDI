@@ -1,10 +1,10 @@
 function setup() {
     createCanvas(innerWidth, innerHeight);
-    eRiley = loadImage('assets/eriley.png');
+    eRiley = loadImage('assets/eRiley.png');
     port = loadImage('assets/portfolio.png');
     resume = loadImage('assets/Resume.png');
     writing = loadImage('assets/writing.png');
-    sWork = loadImage('assets/swork.png');
+    sWork = loadImage('assets/sWork.png');
     topBuffer = createGraphics(innerWidth, innerHeight);
     noStroke();
     noFill();
