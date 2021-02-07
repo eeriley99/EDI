@@ -1,41 +1,32 @@
 function setup() {
     createCanvas(innerWidth, innerHeight);
-    img = loadImage('portfolio.png');
+    port = loadImage('assets/portfolio.png');
+    resume = loadImage('assets/Resume.png');
+    writing = loadImage('assets/writing.png');
     topBuffer = createGraphics(innerWidth, innerHeight);
     noStroke();
     noFill();
 }
 
 function draw() {
-
-    //   for (let a = 250; a > 0; a = a - 50) 
-    fill(0, 0, 0);
-    drawTopBuffer();
-    image(topBuffer, 0, 0);
-
-
-}
-
-function drawTopBuffer() {
-
-    textFont("Amatic SC");
-    textSize(32);
-    fill(0);
     changeCursor();
 }
 
 function changeCursor() {
     if (mouseY < innerHeight / 2 && mouseX < innerWidth / 2) {
         cursor('https://eeriley99.github.io/code_sketchbook/icons-master/cans.png');
-        text("Resume", mouseX, mouseY);
+        image(resume, mouseX, mouseY);
+        tint(255, 10);
     }
     if (mouseY < innerHeight / 2 && mouseX > innerWidth / 2) {
         cursor('https://eeriley99.github.io/code_sketchbook/icons-master/hand.png');
-        image(img, mouseX, mouseY);
+        image(port, mouseX, mouseY);
+        tint(255, 10);
     }
     if (mouseY > innerHeight / 2) {
         cursor('https://eeriley99.github.io/code_sketchbook/icons-master/feather.png');
-        text("Writing", mouseX, mouseY);
+        image(writing, mouseX, mouseY);
+        tint(255, 10);
     }
 }
 
