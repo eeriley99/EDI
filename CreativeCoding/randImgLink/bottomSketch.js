@@ -24,10 +24,10 @@ function setup() {
 }
 
 function draw() {
-    background(255);
+    //background(255);
     drawBottomBuffer();
     image(bottomBuffer, 0, 0);
-    
+
 }
 
 function drawBottomBuffer() {
