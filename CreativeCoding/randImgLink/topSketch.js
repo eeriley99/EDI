@@ -15,17 +15,17 @@ function draw() {
 }
 
 function changeCursor() {
-    if (mouseY < innerHeight / 16) {
+    if (mouseY < 50 && mouseX < innerWidth / 2) {
         image(eRiley, mouseX, mouseY);
         tint(255, 5);
     }
 
-    if (mouseY < innerHeight / 2 && mouseY < innerHeight / 16 && mouseX < innerWidth / 2) {
+    if (mouseY < innerHeight / 2 && mouseY > 100 && mouseX < innerWidth / 2) {
         cursor('https://eeriley99.github.io/code_sketchbook/icons-master/shirt.png');
         image(resume, mouseX, mouseY);
         tint(255, 5);
     }
-    if (mouseY < innerHeight / 2 && mouseY < innerHeight / 16 && mouseX > innerWidth / 2) {
+    if (mouseY < innerHeight / 2 && mouseX > innerWidth / 2) {
         cursor('https://eeriley99.github.io/code_sketchbook/icons-master/hand.png');
         image(port, mouseX, mouseY);
         tint(255, 5);
@@ -36,7 +36,7 @@ function changeCursor() {
         tint(255, 5);
     }
     if (mouseY > innerHeight / 2 && mouseX > innerWidth / 2) {
-        cursor('https://eeriley99.github.io/code_sketchbook/icons-master/sWork.png');
+        cursor('https://eeriley99.github.io/code_sketchbook/icons-master/caterpiller.png');
         image(sWork, mouseX, mouseY);
         tint(255, 5);
     }
@@ -45,11 +45,11 @@ function changeCursor() {
 function mousePressed() {
 
 
-    if (mouseY < innerHeight / 2 && mouseY < innerHeight / 16 && mouseX < innerWidth / 2) {
+    if (mouseY < innerHeight / 2 && mouseY > 100 && mouseX < innerWidth / 2) {
         window.open("https://eeriley99.github.io/EDI/CreativeCoding/OM-E-Dv2/ResumeSample.html", target = "_blank");
     }
 
-    if (mouseY < innerHeight / 2 && mouseY < innerHeight / 16 && mouseX > innerWidth / 2) {
+    if (mouseY < innerHeight / 2 && mouseX > innerWidth / 2) {
         //range accounting for text length
         window.open("https://erinerileyart-blog-blog.tumblr.com/", target = "_blank");
     }
