@@ -8,11 +8,16 @@ canvas {
     display: block;
 }
 
+a {
+    cursor: url('https://eeriley99.github.io/code_sketchbook/icons-master/explode.png'), auto;
+}
+
+
 a:link {
     text-decoration: none;
     color: white;
     font-family: "Lucida Console", "Courier New", monospace;
-    font-size: 24px;
+    font-size: 32px;
 
 }
 
