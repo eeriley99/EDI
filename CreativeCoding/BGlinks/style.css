@@ -15,7 +15,7 @@ a {
 
 a:link {
     text-decoration: none;
-    color: white;
+    color: MistyRose;
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 32px;
 
@@ -23,7 +23,7 @@ a:link {
 
 /* visited link */
 a:visited {
-    color: white;
+    color: MistyRose;
 }
 
 /* mouse over link */
@@ -33,5 +33,5 @@ a:hover {
 
 /* selected link */
 a:active {
-    color: white;
+    color: MistyRose;
 }
