@@ -10,7 +10,7 @@ canvas {
 
 a:link {
     text-decoration: none;
-    color: whitesmoke;
+    color: white;
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 24px;
 
@@ -18,7 +18,7 @@ a:link {
 
 /* visited link */
 a:visited {
-    color: whitesmoke;
+    color: white;
 }
 
 /* mouse over link */
@@ -28,5 +28,5 @@ a:hover {
 
 /* selected link */
 a:active {
-    color: whitesmoke;
+    color: white;
 }
