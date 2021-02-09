@@ -7,7 +7,7 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(windowWidth, windowWidth * 2.16);
     frameRate(0.5);
     noStroke();
 }
@@ -19,7 +19,7 @@ function draw() {
     var XsideLen = windowWidth / num;
 
 
-    for (var dy = 0; dy < windowHeight; dy = dy + XsideLen * 0.53) {
+    for (var dy = 0; dy < windowWidth * 2.16; dy = dy + XsideLen * 0.53) {
 
         for (var dx = 0; dx < windowWidth; dx = dx + XsideLen) {
 
@@ -38,5 +38,5 @@ function draw() {
 }
 
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
+    resizeCanvas(windowWidth, windowWidth * 2.16);
 }
