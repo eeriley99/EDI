@@ -16,9 +16,8 @@
     <script>
         $(document).ready(function() {
             $(".image").hover(function() {
-                $(this).nav_audio.play();
-                attr('src', 'doorOpen.png');
-                
+                $(this).attr('src', 'doorOpen.png');
+                nav_audio.play();
             }, function() {
                 $(this).attr('src', 'doorClosed.png');
             });
