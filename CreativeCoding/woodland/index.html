@@ -14,15 +14,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script>
-        $(document).ready(function() {
-            $(".image").hover(function() {
+        $(document).ready(function () {
+            $(".image").hover(function () {
                 $(this).attr('src', 'doorOpen.png');
                 nav_audio.play();
-            }, function() {
+            }, function () {
                 $(this).attr('src', 'doorClosed.png');
             });
         });
-
     </script>
 </head>
 
