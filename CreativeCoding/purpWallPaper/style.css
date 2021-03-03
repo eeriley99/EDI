@@ -1,11 +1,20 @@
-html, body {
-  margin: 0;
-  padding: 0;
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
+
 canvas {
-  display: block;
+    display: block;
 }
 
 body {
-  background-image: url('purpWallPaper.jpg');
+    background-image: url('purpWallPaper.jpg');
+}
+
+h1 {
+    font-family: 'Petit Formal Script', cursive;
+    left: 30vw;
+    text-align: center;
+    font-size: 7vw;
 }
